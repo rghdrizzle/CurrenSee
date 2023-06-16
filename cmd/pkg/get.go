@@ -1,4 +1,4 @@
-package main
+package currensee
 
 import (
 	"fmt"
@@ -82,11 +82,7 @@ type data struct {
 	Endpoint string `json:"endpoint"`
 }
 
-func main(){
-
-	getlist()
-}
-func getlist(){
+func Getlist(){
 	apikey:= "N03byn9cUhvo7ay5szSx"
 	url := "https://marketdata.tradermade.com/api/v1/live_currencies_list?api_key="+apikey
 	req, err:= http.Get(url)

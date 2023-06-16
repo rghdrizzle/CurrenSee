@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+Copyright © 2023 rghdrizzle 
 
 */
 package cmd
@@ -7,15 +7,32 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/rghdrizzle/CurrenSee/pkg"
 )
 
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "list all the currencies",
-	Long: `.`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("list called")
+	Short: "list to view all the currencies",
+	Long: `The "list" command is a powerful feature of our CLI tool that displays a comprehensive list of all the current currencies along with their corresponding short forms.This command provides users with a quick reference to easily identify and work with various currencies within the tool.To utilize the "list" command, simply enter "list" in the command line interface.The tool will promptly retrieve and display the currency data, presenting a clean and organized list that includes the currency's short form and its full name.
+Example Usage:
+
+$ currensee list
+
+Currencies:
+- USD: United States Dollar
+- EUR: Euro
+- GBP: British Pound Sterling
+- JPY: Japanese Yen
+- ...
+`,
+	
+	 Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("Currency List")
+		fmt.Println("-------------------")
+		currensee.Getlist()
+		
+		
 		
 	},
 }
