@@ -1,22 +1,23 @@
 /*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+Copyright © 2023 rghdrizzle
 */
 package cmd
 
 import (
 	"fmt"
 	"os"
-
 	"github.com/spf13/cobra"
 )
+var version = "0.0.1"
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "CurrenSee",
+	Use:   "currensee",
+	Version: version,
 	Short: "A cli tool to view Currency exchange",
 	Long: `CuurenSee - A beautiful cli crafted by rghdrizzle which can be used for listing the currency of every type of currency and check their histories.
 	Dw it gets updated every 2min`,
-	Run: func(cmd *cobra.Command, args []string) { },
+	Run: func(cmd *cobra.Command, args []string) {},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

@@ -7,9 +7,16 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"io/ioutil"
 	"github.com/rghdrizzle/CurrenSee/pkg"
 )
-
+func banner() {
+    b, err := ioutil.ReadFile("./cmd/ascii.txt")
+    if err != nil {
+        panic(err)
+    }
+    fmt.Println(string(b))
+}
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
@@ -28,6 +35,7 @@ Currencies:
 `,
 	
 	 Run: func(cmd *cobra.Command, args []string) {
+		banner()
 		fmt.Println("Currency List")
 		fmt.Println("-------------------")
 		currensee.Getlist()
