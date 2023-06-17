@@ -11,7 +11,7 @@ import (
 	"github.com/rghdrizzle/CurrenSee/pkg"
 )
 func banner() {
-    b, err := ioutil.ReadFile("./CurrenSee/cmd/ascii.txt")
+    b, err := ioutil.ReadFile(".cmd/ascii.txt")
     if err != nil {
         panic(err)
     }
