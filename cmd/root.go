@@ -17,7 +17,9 @@ var rootCmd = &cobra.Command{
 	Short: "A cli tool to view Currency exchange",
 	Long: `CuurenSee - A beautiful cli crafted by rghdrizzle which can be used for listing the currency of every type of currency and check their histories.
 	Dw it gets updated every 2min`,
-	Run: func(cmd *cobra.Command, args []string) {},
+	Run: func(cmd *cobra.Command, args []string) {
+		banner()
+	},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

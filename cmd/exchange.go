@@ -13,7 +13,7 @@ import (
 // exchangeCmd represents the exchange command
 var exchangeCmd = &cobra.Command{
 	Use:   "exchange",
-	Short: "A brief description of your command",
+	Short: "View the exchange rate",
 	Long: `The exchange command allows you to obtain the exchange rate between two currencies. It provides information such as the currency symbols, bid price, ask price, and mid price. This command is useful for quickly checking the current exchange rate when you need to convert one currency to another.
 
 	Usage:
