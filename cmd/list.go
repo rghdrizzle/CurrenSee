@@ -11,7 +11,7 @@ import (
 	"github.com/rghdrizzle/CurrenSee/pkg"
 )
 func banner() {
-    b, err := ioutil.ReadFile("./cmd/ascii.txt")
+    b, err := ioutil.ReadFile("./CurrenSee/cmd/ascii.txt")
     if err != nil {
         panic(err)
     }
@@ -35,7 +35,6 @@ Currencies:
 `,
 	
 	 Run: func(cmd *cobra.Command, args []string) {
-		banner()
 		fmt.Println("Currency List")
 		fmt.Println("-------------------")
 		currensee.Getlist()

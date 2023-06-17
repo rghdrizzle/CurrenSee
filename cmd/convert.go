@@ -36,7 +36,6 @@ var convertCmd = &cobra.Command{
 	Feel free to explore the other commands available in the CurrenSee CLI Tool to list currencies and display exchange rates. `,
 	Args: cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		banner()
 		from,_= cmd.Flags().GetString("from")
 		to,_ = cmd.Flags().GetString("to")
 		currensee.Convert(args[0],from,to)
